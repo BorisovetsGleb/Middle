@@ -3,9 +3,9 @@
 int itc_len_num(long long num)
 {
     int i = 0;
-    num = itc_abs(num);
     if(num == 0)
-        return 1;12
+        return 1;
+    num = itc_abs(num);
     while(num > 0)
     {
         i ++;

@@ -12,6 +12,14 @@ int itc_second_max_num(long long num)
     num2 = num;
     long long num3 = 1;
     bool isMax = 0;
+    int len = itc_len_num(num);
+    //std::cout <<len <<" ";
+    //std::cout <<"num % itc_pow(10, len - 1) = " <<num % itc_pow(10, len - 1) <<" (num % itc_pow(10, len - 1)) / 10 = " <<(num % itc_pow(10, len - 1)) / 10 <<" ";
+    /*if((num % itc_pow(10, len - 1)) / 10 == 0)
+        return 0;*/
+    //std::cout <<itc_sum_num(num % itc_pow(10, len - 1)) <<" ";
+    if(itc_sum_num(num % itc_pow(10, len - 1)) == 0)
+        return 0;
     while (num2 > 0)
     {
         if(num2 % 10 == max1 && isMax == 0)
