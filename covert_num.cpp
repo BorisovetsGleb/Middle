@@ -28,7 +28,7 @@ long long itc_covert_num(long long num, int i)
         bin2 = my_rev(bin1) * my_ten_in_step(colOfNols);
     else
         bin2 = my_rev(bin1);
-    if(itc_rev_covert_num(bin2, i) == num)
+    if(itc_rev_bin_num(bin2) == num)
     {
         return bin2;
     }
