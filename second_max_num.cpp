@@ -3,10 +3,6 @@
 int itc_second_max_num(long long num)
 {
     num = itc_abs(num);
-    if(num < 10)
-        return -1;
-    int max1 = 0;
-    int max2 = 0;
     /*max1 = itc_max_num(num);
     long long num2;
     num2 = num;
@@ -32,9 +28,10 @@ int itc_second_max_num(long long num)
         num2 = num2 / 10;
     }
     max2 = itc_max_num(num3);*/
+    if(num < 10)
+        return -1;
     int max1 = 0;
-
-    num = itc_abs(num);
+    int max2 = 0;
     while(num > 0)
     {
         if(num % 10 > max1)
