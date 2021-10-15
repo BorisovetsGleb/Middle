@@ -39,11 +39,11 @@ int itc_second_max_num(long long num)
             max2 = max1;
             max1 = num % 10;
         }
-        else
+        /*else
         {
             if(num % 10 > max2 && num % 10 < max1)
                 max2 = num % 10;
-        }
+        }*/
         num = num / 10;
     }
     return max2;
