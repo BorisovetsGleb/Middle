@@ -7,18 +7,18 @@ int itc_second_max_num(long long num)
         return -1;
     int max1 = 0;
     int max2 = 0;
-    max1 = itc_max_num(num);
+    /*max1 = itc_max_num(num);
     long long num2;
     num2 = num;
     long long num3 = 1;
     bool isMax = 0;
-    int len = itc_len_num(num);
+    int len = itc_len_num(num);*/
     //std::cout <<len <<" ";
     //std::cout <<"num % itc_pow(10, len - 1) = " <<num % itc_pow(10, len - 1) <<" (num % itc_pow(10, len - 1)) / 10 = " <<(num % itc_pow(10, len - 1)) / 10 <<" ";
     /*if((num % itc_pow(10, len - 1)) / 10 == 0)
         return 0;*/
     //std::cout <<itc_sum_num(num % itc_pow(10, len - 1)) <<" ";
-    if(itc_sum_num(num % itc_pow(10, len - 1)) == 0)
+    /*if(itc_sum_num(num % itc_pow(10, len - 1)) == 0)
         return 0;
     while (num2 > 0)
     {
@@ -31,5 +31,18 @@ int itc_second_max_num(long long num)
             num3 = num3 * 10 + (num2 % 10);
         num2 = num2 / 10;
     }
-    max2 = itc_max_num(num3);
+    max2 = itc_max_num(num3);*/
+    int max1 = 0;
+
+    num = itc_abs(num);
+    while(num > 0)
+    {
+        if(num % 10 > max1)
+        {
+            max2 = max1;
+            max1 = num % 10;
+        }
+        num = num / 10;
+    }
+    return max2;
 }
