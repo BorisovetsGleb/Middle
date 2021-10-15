@@ -2,15 +2,15 @@
 
 int itc_max_num(long long num)
 {
-    int max = 0;
+    int max1 = 0;
     num = itc_abs(num);
     while(num > 0)
     {
-        if(num % 10 > max)
+        if(num % 10 > max1)
         {
-            max = num % 10;
+            max1 = num % 10;
         }
         num = num / 10;
     }
-    return max;
+    return max1;
 }
