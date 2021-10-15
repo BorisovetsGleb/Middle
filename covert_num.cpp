@@ -4,6 +4,8 @@ long long itc_covert_num(long long num, int i)
 {
     if(num < 0)
         return -1;
+    if(i > 10 || i < 2)
+        return -1;
     long long num2 = num;
     long long bin1 = 0;
     long long bin2 = 0;
@@ -15,7 +17,7 @@ long long itc_covert_num(long long num, int i)
         {
             colOfNols ++;
         }
-        if(num % i == 1)
+        if(num % i != 0)
         {
             isFirstOne = 1;
         }
@@ -28,7 +30,7 @@ long long itc_covert_num(long long num, int i)
         bin2 = my_rev(bin1) * my_ten_in_step(colOfNols);
     else
         bin2 = my_rev(bin1);
-    if(itc_rev_bin_num(bin2) == num)
+    if(itc_rev_covert_num(bin2, i) == num)
     {
         return bin2;
     }
